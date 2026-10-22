@@ -1,0 +1,3358 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#"
+     xml:base="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://www.semanticweb.org/porta/ontologies/2022/5/VideOWL#terms:">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/VideOWL">
+        <terms:created>Marianna Nicolosi-Asmundo</terms:created>
+        <terms:created>Simone De Martino</terms:created>
+        <terms:created>Stefano Angelo Rizzo</terms:created>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/VideOWL#terms:created -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/VideOWL#terms:created"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#NPCOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#NPCOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#characterOf"/>
+        <rdfs:comment xml:lang="en">Non-playing character of a game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">personaggio non giocabile nel videogame</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POVOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POVOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#featureOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV"/>
+        <rdfs:comment xml:lang="en">Perspective employed to visualize the game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">prospettiva impiegata per visualizzare il gioco</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#antagonistOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#antagonistOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#NPCOf"/>
+        <rdfs:comment xml:lang="en">Antagonists and enemies</rdfs:comment>
+        <rdfs:comment xml:lang="ita">antagonisti e nemici</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#characterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#characterOf">
+        <rdfs:comment xml:lang="en">property used to define the fictitious characters (therefore, not the real living developers) of a game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">proprietà che serve a definire i personaggi fittizi (quindi, non gli sviluppatori realmente viventi) di un gioco</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#colleagueOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#colleagueOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Single"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Single"/>
+        <rdfs:comment xml:lang="en">Symmetric property that manages the working relationships between various developers of the same title</rdfs:comment>
+        <rdfs:comment xml:lang="ita">proprietà simmetrica che gestisce i rapporti di collaborazione lavorativa tra vari sviluppatori di un titolo</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#compatibleWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#compatibleWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasFeature"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#platformOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Platform"/>
+        <rdfs:comment xml:lang="en">Refer to its inverse.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">vedi la sua inversa</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#contextOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#contextOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#featureOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+        <rdfs:comment xml:lang="en">Specific context applied to a gaming experience</rdfs:comment>
+        <rdfs:comment xml:lang="ita">contesto specifico applicato a un&apos;esperienza videoludica</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#deuteragonistOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#deuteragonistOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#playableOf"/>
+        <rdfs:comment xml:lang="en">co-protagonist</rdfs:comment>
+        <rdfs:comment xml:lang="ita">co-protagonista</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#developedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#developedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasFeature"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#developerOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Developer"/>
+        <rdfs:comment xml:lang="en">Refer to its inverse.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">vedi la sua inversa</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#developerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#developerOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#featureOf"/>
+        <rdfs:comment xml:lang="en">Real person that contributed to a videogame development</rdfs:comment>
+        <rdfs:comment xml:lang="ita">persona reale che ha sviluppato un titolo specifico</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#employedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#employedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hires"/>
+        <rdfs:comment xml:lang="en">Subordination relationship of a developer to an employer. It has no reference domain as it may be both a development company or another lead developer, but also other special cases of relationship.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">rapporto di subordinazione di uno sviluppatore a un datore di lavoro, non ha dominio di riferimento in quanto può essere sia una casa di sviluppo o un altro sviluppatore-capo, ma anche altri casi particolari</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#employeeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#employeeOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Single"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#SoftwareHouse"/>
+        <rdfs:comment xml:lang="en">Describes a working relationship directly between individual developer and software house</rdfs:comment>
+        <rdfs:comment xml:lang="ita">descrive un rapporto di lavoro direttamente tra singolo developer e software house</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#featureOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#featureOf">
+        <rdfs:comment xml:lang="ita">macroproprietà che racchiude al suo interno tutto ciò che può essere impiegato da un individual-descrizione per mettersi in relazione con un individual-videogioco, con individual-attore o con un individual-piattaforma</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#featureOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+        <rdfs:comment xml:lang="en">Specific gameplay in a gaming experience</rdfs:comment>
+        <rdfs:comment xml:lang="ita">tipo di gameplay è inserito in un gioco</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasFeature"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Context"/>
+        <rdfs:comment xml:lang="en">Refer to its inverse.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">vedi la sua inversa</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasFeature">
+        <rdfs:comment xml:lang="en">The conceptual inverse of &quot;featureof&quot;, but having as subject the single game rather than the individual of the characteristic: for this reason, there will be always &quot;Game&quot; as their domain. Please refer to the dataproperty mentioned above for clarification on individual properties.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">concettualmente l&apos;inversa di caratteristicadi, ma con soggetto il gioco singolo piuttosto che l&apos;individual della caratteristica: per questo hanno sempre Game come dominio. Si rimanda alla dataproperty sopra menzionata per avere chiarimenti sulle singole proprietà.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasFeature"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+        <rdfs:comment xml:lang="en">Refer to its inverse.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">vedi la sua inversa</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasFeature"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#mechanicOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic"/>
+        <rdfs:comment xml:lang="en">Refer to its inverse.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">vedi la sua inversa</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasNarrative -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasNarrative">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasFeature"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#narrationOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Narrative"/>
+        <rdfs:comment xml:lang="en">Refer to its inverse.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">vedi la sua inversa</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasFeature"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POV"/>
+        <rdfs:comment xml:lang="en">Refer to its inverse.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">vedi la sua inversa</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hires -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hires">
+        <rdfs:comment xml:lang="en">Describes the subordination relationship from an employer to a developer</rdfs:comment>
+        <rdfs:comment xml:lang="ita">Descrive il rapporto di subordinazione da un datore di lavoro a uno sviluppatore</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#includes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#includes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#partOf"/>
+        <rdfs:comment xml:lang="ita">Serve a identificare un rapporto di inclusione generico</rdfs:comment>
+        <rdfs:comment xml:lang="en">Used to identify a generic inclusion relationship</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#mechanicOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#mechanicOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#featureOf"/>
+        <rdfs:comment xml:lang="en">Specific game mechanic used in a title</rdfs:comment>
+        <rdfs:comment xml:lang="ita">meccanica programmata in un titolo</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#narrationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#narrationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#featureOf"/>
+        <rdfs:comment xml:lang="en">Specific narrative line adopted in a video game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">linea narrativa adottata in un videogame</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#partOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:comment xml:lang="en">It is used to identify a generic inclusion relationship</rdfs:comment>
+        <rdfs:comment xml:lang="ita">impiegato per identificare un rapporto di inclusione generico</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#platformOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#platformOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#featureOf"/>
+        <rdfs:comment xml:lang="en">Device that can successfully start the game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">dispositivo che può avviare correttamente il game</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#playableOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#playableOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#characterOf"/>
+        <rdfs:comment xml:lang="en">Character impersonable in a game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">personaggio impersonabile in un titolo</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#prequelOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#prequelOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#sequelOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:comment xml:lang="en">Transitive property that establishes whether a game is a prequel to another game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">proprietà transitiva che stabilisce se un gioco è prequel di un altro gioco</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#protagonistOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#protagonistOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#playableOf"/>
+        <rdfs:comment xml:lang="en">Main character</rdfs:comment>
+        <rdfs:comment xml:lang="ita">protagonista principale</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#secondaryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#secondaryOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#NPCOf"/>
+        <rdfs:comment xml:lang="en">Secondary characters</rdfs:comment>
+        <rdfs:comment>personaggi secondari</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#sequelOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#sequelOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">Transitive property that establishes whether a game is a sequel to another game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">proprietà transitiva che stabilisce se un gioco è sequel di un altro gioco</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasReleaseDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasReleaseDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Time value (xsd:dateTime) used to indicate the release date of a video game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">valore temporale (xsd:dateTime) che serve a indicare la data di uscita di un videogioco</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#income -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#income">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">numerical value (xsd:float) for demonstration purposes: the ontology could be used to describe the gross profit of a videogame title</rdfs:comment>
+        <rdfs:comment xml:lang="ita">valore numerico (xsd:float) a titolo dimostrativo che si potrebbe impiegare per descrivere il profitto lordo di un titolo videoludico</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#indie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#indie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Developer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Boolean value (xsd:boolean) which indicates whether an individual of the Developer domain is independent or not</rdfs:comment>
+        <rdfs:comment xml:lang="ita">valore booleano (xsd:boolean) che indica se un individual del dominio Sviluppatore è indipendente o meno</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ActionRPG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ActionRPG">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Combat"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#character_development"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Action"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RPG"/>
+        <rdfs:comment xml:lang="en">Action Role-Playing Game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">RPG d&apos;azione</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Adventure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Adventure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Agent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Agent">
+        <rdfs:comment xml:lang="en">Sociological actor inside or outside the game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">attore sociologico interno o esterno al gioco</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Art -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Art">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Artistic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Artistic">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Art"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Other"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Realistic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Character">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fictional"/>
+        <rdfs:comment xml:lang="en">Character encoded in the game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">personaggio codificato nel game</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Choice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Choice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic"/>
+        <rdfs:comment xml:lang="en">Mechanic that allows the player to impart a direction besidesthe default one either to some elements of the game world or to the plot revolving around it. Choices often are the key to games with multiple endings, altough sone games employ more subtle element to determine an ending (i.e. the case of &quot;SIGNALIS&quot;)</rdfs:comment>
+        <rdfs:comment xml:lang="ita">meccanica che permette al giocatore di impartire una direzione diversa dalla predefinita ad alcuni elementi del mondo di gioco o alla trama. Le scelte sono spesso la chiave dei giochi che presentano diversi finali, tuttavia bisogna comprendere che possono esserci altri elementi più sottili che determinano quella variabile (ad esempio, si veda il caso del gioco &quot;SIGNALIS&quot;)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Collection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Collection">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#includes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Series of games</rdfs:comment>
+        <rdfs:comment xml:lang="ita">le serie che contengono i giochi</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Combat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Combat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Sportive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Context -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Context">
+        <rdfs:comment xml:lang="en">Ad Hoc semantic class ideated to distinguish the different approaches a game retains when compared to everyday life</rdfs:comment>
+        <rdfs:comment xml:lang="ita">classe semantica ideata ad hoc per poter distinguere i diversi approcci che un videogioco può presentare nei confronti della nostra realtà quotidiana</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ContextualInteraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ContextualInteraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PointAndClick"/>
+        <rdfs:comment xml:lang="en">possibility of interaction with elements of the game, based on well-defined contexts. Usually the interaction occurs via the input of a dedicated button on the keyboard/joystick.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">possibilità di interagire con degli elementi di gioco in base a contesti ben definiti. Di solito l&apos;interazione avviene per input di un pulsante dedicato della tastiera o del joystick.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#DatingSim -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#DatingSim">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#romance_based"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasNarrative"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#emergent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulator"/>
+        <rdfs:comment xml:lang="en">Dating and/or mating simulator</rdfs:comment>
+        <rdfs:comment xml:lang="ita">simulatore di appuntamento romantico e/o erotico</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Developer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Developer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Real"/>
+        <rdfs:comment xml:lang="en">Developer of the game</rdfs:comment>
+        <rdfs:comment>attore che ha sviluppato il videogame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#DrivingSim -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#DrivingSim">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#vehicle_based"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasNarrative"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#evocation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulator"/>
+        <rdfs:comment xml:lang="en">Vehicle driving simulator</rdfs:comment>
+        <rdfs:comment xml:lang="ita">simulatore di guida di veicoli</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#DynamicAdventure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#DynamicAdventure">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Combat"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Exploration"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Action"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Explorative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Educational -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Educational">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Educative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Educative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Educative">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Educational"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Emergent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Emergent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Narrative"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Evocative"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Framed"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simple"/>
+        <rdfs:comment xml:lang="en">Player&apos;s options and/or choices have a concrete impact on the structure or the way the plot progresses</rdfs:comment>
+        <rdfs:comment xml:lang="ita">le opzioni e/o scelte del giocatore hanno un impatto concreto sulla struttura o sulla modalità di progresso della trama</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Evocative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Evocative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Narrative"/>
+        <rdfs:comment xml:lang="en">The themes or elements within the game refer to brands or elements of social life, with the effect of triggering knowledge in the player starting from outside the title itself</rdfs:comment>
+        <rdfs:comment xml:lang="ita">i temi o gli elementi all’interno del gioco fanno riferimento a brand o elementi della vita mondana, con l’effetto di scatenare conoscenze nel giocatore a partire dall’esterno del titolo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Exclusive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Exclusive">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#compatibleWith"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Platform"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplatform"/>
+        <rdfs:comment xml:lang="en">Game has been released exclusively to a certain platform</rdfs:comment>
+        <rdfs:comment xml:lang="ita">specifica se il titolo è stato rilasciato solo su una piattaforma</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Exploration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Exploration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Explorative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Explorative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Adventure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPS">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Shooter"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPS"/>
+        <rdfs:comment xml:lang="en">First Person Shooter</rdfs:comment>
+        <rdfs:comment xml:lang="ita">sparatutto in prima persona</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPSFantasy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPSFantasy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fantasy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPSRealistic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPSRealistic">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Realistic"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Familiar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Familiar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Context"/>
+        <rdfs:comment xml:lang="en">Game inspired by real events or verisimilar, with gimmicks such as historical points of divergence (e.g. the Fallout franchise occours in a reality where transistors weren&apos;t invented) or liminal contexts (such as a burglar breaking into an house)</rdfs:comment>
+        <rdfs:comment xml:lang="ita">gioco che prende ispirazione da eventi reali o simili, con stratagemmi come i punti di divergenza storici (es. fallout con non-creazione dei transistor) o contesti liminali (un ladro che ti entra in casa)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FamiliarExploration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FamiliarExploration">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Familiar"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Exploration"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Explorative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fantasy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fantasy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Context"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Realistic"/>
+        <rdfs:comment xml:lang="en">Game offers elements entirely of fantasy and disconnected from worldly reality, in a positive fashion</rdfs:comment>
+        <rdfs:comment xml:lang="ita">gioco propone elementi interamente di fantasia e sconnessi dalla realtà mondana, con accezione positiva</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FantasyExploration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FantasyExploration">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fantasy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Exploration"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Explorative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fictional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fictional">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Agent"/>
+        <rdfs:comment xml:lang="en">Sociological actor located inside the game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">attore sociologico interno al gioco</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fighting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fighting">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplayer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#corpo_a_corpo"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FirstPerson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FirstPerson">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POVOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPS"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PersonStandpoint"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ThirdPerson"/>
+        <rdfs:comment xml:lang="en">The events of the game are seen through the eyes of the playable character</rdfs:comment>
+        <rdfs:comment xml:lang="ita">vedere gli eventi del gioco attraverso gli occhi del personaggio giocabile</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Framed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Framed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Narrative"/>
+        <rdfs:comment xml:lang="en">The narration is nested in multiple stories, probably with multiple protagonists, which then merge into a single and complex plot</rdfs:comment>
+        <rdfs:comment xml:lang="ita">narrazione nidificata in più storie, probabilmente con più protagonisti, che poi vanno a confluire in un intreccio unico e complesso</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Free -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Free">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Context"/>
+        <rdfs:comment xml:lang="en">Game doesent&apos; offer a complex plot, rather gives the player a meager initial context in order to emphasize the creative possibilities</rdfs:comment>
+        <rdfs:comment xml:lang="ita">l gioco non propone tanto una trama complessa quanto un misero contesto iniziale, al fine di enfatizzare le possibilità creative del giocatore</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#developedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Developer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Context"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasNarrative"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Narrative"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POV"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A single videogame title</rdfs:comment>
+        <rdfs:comment xml:lang="ita">categoria che esplora il singolo videogioco</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay">
+        <rdfs:comment xml:lang="en">Macroclass describing the variosus types of experience a videogame may present. In the easiest instances, there will be a single and namesake individual inside the class, in the most complex scenario there will be different instances of the same game mode.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">macroclasse che descrive i  vari tipi di stile e di esperienza di gioco ritrovabili in un titolo. Nei casi più semplici le classi ospitano un individual omonimo per consentire una classificazione adeguata, nei casi più complessi invece troviamo più istanze della stessa modalità di gioco</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Genre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:comment xml:lang="ita">Il genere del videogioco</rdfs:comment>
+        <rdfs:comment xml:lang="en">The genre of the videogame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gore">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Grotesque"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Combat"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Movement"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Horror"/>
+        <rdfs:comment xml:lang="en">Game offers explicit and violent visual elements</rdfs:comment>
+        <rdfs:comment xml:lang="ita">gioco con elementi visivi espliciti e violenti</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Grotesque -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Grotesque">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Context"/>
+        <rdfs:comment xml:lang="en">Game offers typical horror or innatural elements</rdfs:comment>
+        <rdfs:comment xml:lang="ita">il videogame vede al suo interno elementi tipicamente horror o innaturali</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Horror -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Horror">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#InteractiveMovie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#InteractiveMovie">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Choice"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ContextualInteraction"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Adventure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Inventory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Inventory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic"/>
+        <rdfs:comment xml:lang="en">Display and selection systems of the objects collected by the player</rdfs:comment>
+        <rdfs:comment xml:lang="ita">sistemi di visualizzazione e selezione degli oggetti disponibili al giocatore</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Isometric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Isometric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POV"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PersonStandpoint"/>
+        <rdfs:comment xml:lang="en">Views that frame a large portion of the playing area using an isometric POV or a &quot;pseudo 3D&quot; technique</rdfs:comment>
+        <rdfs:comment xml:lang="ita">visualizzazioni che inquadrano una grossa porzione dell’area di gioco impiegando punti di vista isometrici o tecniche di &quot;pseudo tridimensionalità&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#JobSim -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#JobSim">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#job_based"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasNarrative"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#emergent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulator"/>
+        <rdfs:comment xml:lang="en">Job simulation</rdfs:comment>
+        <rdfs:comment xml:lang="ita">simulatore di un mestiere</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Lore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Lore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+        <rdfs:comment xml:lang="ita">inserimento di elementi narrativi indiretti del mondo di gioco</rdfs:comment>
+        <rdfs:comment xml:lang="en">introduction of indirect narrative elements about the game world</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Malee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Malee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Combat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Management">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Choice"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasNarrative"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simple"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#value_based"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Match -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Match">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplayer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#corpo_a_corpo"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#with_matches"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fighting"/>
+        <rdfs:comment xml:lang="ita">Di solito da 2 a 4 giocatori si picchiano in incontri che terminano in base a un limite di tempo o al termine della barra della vita</rdfs:comment>
+        <rdfs:comment xml:lang="en">Usually 2 to 4 players beat each other in matches that end after some time or at one&apos;s health depletion</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic">
+        <rdfs:comment xml:lang="en">Macroclass descriving the game machanics. These differ from the gameplay as the mechanics occour regardless of a game&apos;s style or goals.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">macroclasse che descrive le varie meccaniche di gioco ritrovabili in un titolo, sono diverse dal gameplay perchè le meccaniche prescindono sempre dallo stile di gioco adottato</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Metroidvania -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Metroidvania">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OpenWorld"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Puzzle"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Inventory"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Isometric"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Adventure"/>
+        <rdfs:comment xml:lang="en">Peculiar type of video game that takes its name from its two progenitors, &quot;Metroid&quot; and &quot;Castlevania&quot;. It is characterized by the side-scrolling view and the need to return to previously explored places taking advantage of new equipment unlocked as the story progresses</rdfs:comment>
+        <rdfs:comment xml:lang="ita">tipologia particolare di videgioco che prende il nome dai suoi due capostipite, &quot;Metroid&quot; e &quot;Castlevania&quot;. Si caratterizza per la visuale a scorrimento laterale e la necessità di ritornare in luoghi già esplorati con nuovi equipaggiamenti sbloccati andando avanti nella trama.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Minigames -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Minigames">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Movement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplatform -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplatform">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#compatibleWith"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Platform"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+        <rdfs:comment xml:lang="en">Game has been released on multiple platforms</rdfs:comment>
+        <rdfs:comment xml:lang="ita">specifica se il titolo è stato rilasciato su più di una piattaforma</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplayer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MultiplayerAvailable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MultiplayerAvailable">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplayer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Genre"/>
+        <rdfs:comment xml:lang="en">game ideated in multiplayer mode</rdfs:comment>
+        <rdfs:comment xml:lang="ita">gioco pensato in modalità a più giocatori</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#NPC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#NPC">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#NPCOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Character"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Playable"/>
+        <rdfs:comment xml:lang="en">Non-playing character of the game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">personaggio non impersonabile dal giocatore</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Narrative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Narrative">
+        <rdfs:comment xml:lang="en">Macroclass describing the storytelling tecnique and the narrative elements in a videogame, semiotically seen ad a text.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">macroclasse che descrive in che categoria narrativa rientrano gli elementi narrativi all’interno di un testo videoludico</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#NonRPG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#NonRPG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RPG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OpenWorld -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OpenWorld">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Exploration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Genre"/>
+        <rdfs:comment xml:lang="en">Game concieved as an outsider from the schemes that we profiled as the most classic</rdfs:comment>
+        <rdfs:comment xml:lang="ita">gioco che esce -principalmente per scelta- dagli schemi che abbiamo profilato come i più classici</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POV">
+        <rdfs:comment xml:lang="en">Poin Of View: the visualization through which the gaming experience manifest itself in the eyes of the player</rdfs:comment>
+        <rdfs:comment xml:lang="ita">visualizzazione tramite la quale l&apos;esperienza videoludica diventa manifesta agli occhi del giocatore</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Party -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Party">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Party"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MultiplayerAvailable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PersonStandpoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PersonStandpoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POV"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Textual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Platform -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Platform">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#platformOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Hardware support of a game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">supporti hardware al videogioco</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Platformer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Platformer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Puzzle"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_platform"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Action"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Playable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Playable">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#playableOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Game"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Character"/>
+        <rdfs:comment xml:lang="en">Playable character of the game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">personaggio impersonabile dal giocatore</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PointAndClick -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PointAndClick">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic"/>
+        <rdfs:comment xml:lang="en">peculiar type of interaction with the game environment, based on clicking exclusively with the mouse or cursor on particular elements of the scenario</rdfs:comment>
+        <rdfs:comment>tipo particolare di interazione con l&apos;ambiente di gioco basato esclusivamente sul cliccare esclusivamente con il mouse alcuni elementi particolari dello scenario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Pseudonym -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Pseudonym">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fictional"/>
+        <rdfs:comment xml:lang="en">Identifies alter egos of real people in the game or states relationships between Fictional- and Real- individuals that may refer to the same Agent, using the OWL relationship &quot;Same_Indivudal_As&quot;</rdfs:comment>
+        <rdfs:comment>identifica alter ego nel gioco di persone reali o per stabilire relazioni tra individuals fittizi e reali che fanno riferimento allo stesso agente tramite la relazione OWL &quot;Same_Indivudal_As&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Psychological -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Psychological">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Choice"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#psychological"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Horror"/>
+        <rdfs:comment xml:lang="en">Game offers elements of psychological violence</rdfs:comment>
+        <rdfs:comment xml:lang="ita">gioco con elementi di violenza psicologica</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Puzzle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Puzzle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PuzzleGame -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PuzzleGame">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Puzzle"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#QTE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#QTE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RPG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RPG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Genre"/>
+        <rdfs:comment xml:lang="en">Role-Playing Game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">gioco di ruolo (GDR)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Real -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Real">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Agent"/>
+        <rdfs:comment xml:lang="en">Sociological actor located outside the game</rdfs:comment>
+        <rdfs:comment xml:lang="ita">attore sociologico esterno al gioco</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Realistic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Realistic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Context"/>
+        <rdfs:comment xml:lang="en">Narrative creativity does not find space within the videogame, as it tries to be a realistic reconstruction without fictional elements</rdfs:comment>
+        <rdfs:comment xml:lang="ita">la creatività narrativa non trova spazio dentro il videogioco, in quanto si tratta di una ricostruzione realistica e senza elementi di fantasia</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Roguelike -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Roguelike">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#dungeon_exploration"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#turn_based"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#permanent_death"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RPG"/>
+        <rdfs:comment xml:lang="en">Game typically features dungeon exploration -which levels are procedurally generated- turn-based combat and permanent death (permadeath) of the player character</rdfs:comment>
+        <rdfs:comment>gioco caratterizzato tipicamente dall&apos;esplorazione di un dungeon attraverso livelli generati proceduralmente, combattimenti a turni e morte permanente del personaggio giocante</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#SandBox -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#SandBox">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasNarrative"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Narrative"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#creation_based"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasNarrative"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#emergent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulator"/>
+        <rdfs:comment xml:lang="en">Games that use freely explorable levels -without the limit of invisible walls- which can be completed in different ways and with an emphasis on creative possibilities</rdfs:comment>
+        <rdfs:comment xml:lang="ita">videogiochi che utilizzano livelli liberamente esplorabili, senza muri invisibili, completabili in diversi modi e con enfasi sulle possibilità creative</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Scrolling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Scrolling">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplayer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#corpo_a_corpo"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#side_scrolling"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fighting"/>
+        <rdfs:comment xml:lang="ita">&quot;beat &apos;em up&quot; dove il giocatore combatte i nemici su una mappa a scorrimento laterale</rdfs:comment>
+        <rdfs:comment xml:lang="en">scrolling &quot;beat &apos;em up&quot; where players fight enemies on a scrolling map</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Shooter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Shooter">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Shooting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Shooting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Combat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Narrative"/>
+        <rdfs:comment xml:lang="en">Classic single track storytelling</rdfs:comment>
+        <rdfs:comment xml:lang="ita">classica narrazione su binario singolo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Genre"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Free"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>giochi dove si simula uno scenario specifico</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Single -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Single">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#indie"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Developer"/>
+        <rdfs:comment xml:lang="en">Individual developer</rdfs:comment>
+        <rdfs:comment xml:lang="ita">singolo sviluppatore</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#SoftwareHouse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#SoftwareHouse">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hires"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Developer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Developer"/>
+        <rdfs:comment xml:lang="en">Collective of developers</rdfs:comment>
+        <rdfs:comment xml:lang="ita">collettivo di sviluppatori</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Sport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Sport">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Sportive"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasNarrative"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#evocation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Sportive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Sportive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Stealth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Stealth">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_stealth"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Action"/>
+        <rdfs:comment xml:lang="en">Game with intense player hiding mechanics</rdfs:comment>
+        <rdfs:comment>gioco con meccaniche intense di occultamento del giocatore</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Strategic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Strategic">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Strategy"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Strategy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Strategy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Gameplay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Survival -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Survival">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#SurvivalHorror -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#SurvivalHorror">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Grotesque"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Horror"/>
+        <rdfs:comment xml:lang="en">Game where the enemies are more than the resources to fight them</rdfs:comment>
+        <rdfs:comment xml:lang="ita">Il gioco presenta la mancanza delle risorse necessarie ad eliminare ogni nemico</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPS">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Shooter"/>
+        <rdfs:comment xml:lang="en">Third Person Shooter</rdfs:comment>
+        <rdfs:comment xml:lang="ita">sparatutto in terza persona</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPSFantasy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPSFantasy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fantasy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPSRealistic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPSRealistic">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasContext"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Realistic"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Tactic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Tactic">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Strategy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Management"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Shooter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Textual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Textual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POV"/>
+        <rdfs:comment xml:lang="en">Game presents itself mainly as in a text form, typical of text adventures or interactive fiction</rdfs:comment>
+        <rdfs:comment xml:lang="ita">il gioco viene visualizzato principalmente in formato di testo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ThirdPerson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ThirdPerson">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POVOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPS"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PersonStandpoint"/>
+        <rdfs:comment xml:lang="en">The events of the game are seen framed alongside the playable character</rdfs:comment>
+        <rdfs:comment xml:lang="ita">vedere gli eventi del gioco incorniciati al personaggio giocabile</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#VisualNovel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#VisualNovel">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasGameplay"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Puzzle"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Choice"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasMechanic"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#QTE"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasPOV"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Textual"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hasNarrative"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#simple"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Adventure"/>
+        <rdfs:comment xml:lang="en">Peculiar type of game characterized both by an interactive adventure with mulltiple choices that influence the plot as well as the heavy presence of text. The visual elements (images, short films) mostly frame the text.</rdfs:comment>
+        <rdfs:comment xml:lang="ita">il &quot;romanzo visivo&quot; è un tipo particolare di gameplay caratterizzato da una avventura interattiva con scelte che influenzano la trama e dalla forte presenza di testo. Gli elementi visivi (immagini, brevi filmati) fanno più che altro da cornice al testo e non sono elemento di interazione.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#AC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#AC">
+        <includes rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN&apos;SCREED"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASCII -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASCII">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Textual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Activision -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Activision"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Android -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Android"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Apple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Apple"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#BANDAI_NAMCO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#BANDAI_NAMCO">
+        <developerOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TEKKEN_7"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Bandai_Namco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#BIG_BRAIN_ACADEMY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#BIG_BRAIN_ACADEMY">
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Nintendo_Ds"/>
+        <developedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Nintendo"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#acquisition"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Co-op"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#learning"/>
+        <hasReleaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-06-30T00:00:00</hasReleaseDate>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Big_Brain_Academy:_Wii_Degree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#BINDING_OF_ISAAC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#BINDING_OF_ISAAC">
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Pc_gaming"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#dungeon_exploration"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time"/>
+        <hasMechanic rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#multiple_choice"/>
+        <hasMechanic rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#permanent_death"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_isometrics"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/The_Binding_of_Isaac"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#BioWare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#BioWare">
+        <developerOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MASS_EFFECT_III"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/BioWare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CALL_OF_DUTY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CALL_OF_DUTY">
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Pc_gaming"/>
+        <developedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Infinity_Ward"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#historical"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PVP"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+        <hasNarrative rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#simple"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P"/>
+        <hasReleaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-10-29T00:00:00</hasReleaseDate>
+        <income rdf:datatype="http://www.w3.org/2001/XMLSchema#float">400000.0</income>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Call_of_Duty_(videogioco)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CAPCOM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CAPCOM">
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Capcom%20"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Clickbased -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Clickbased"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Co-op -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Co-op">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplayer"/>
+        <rdfs:comment xml:lang="ita">Stile di gioco cooperativo</rdfs:comment>
+        <rdfs:comment xml:lang="en">cooperative gameplay</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#EPIC_GAMES -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#EPIC_GAMES">
+        <developerOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FORTNITE"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Epic_Games"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Edmund_McMillen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Edmund_McMillen">
+        <developerOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#BINDING_OF_ISAAC"/>
+        <indie rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</indie>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Edmund_McMillen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Electronic_Arts -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Electronic_Arts">
+        <developerOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FIFA_2022"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Electronic_Arts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FABLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FABLE">
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Pc_gaming"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#XBOX_360"/>
+        <developedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Lionehead_studios"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#mithical"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_roaming"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time"/>
+        <hasMechanic rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#character_development"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Fable_(videogioco_2004)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FIFA_2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FIFA_2022">
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PVP"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#agonistic"/>
+        <hasNarrative rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#evocation"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/FIFA_22"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FORTNITE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FORTNITE">
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Open_map"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PVP"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Party"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#creation_based"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+        <hasNarrative rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#emergent"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Fortnite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#General_Sheperd -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#General_Sheperd">
+        <antagonistOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CALL_OF_DUTY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Infinity_Ward -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Infinity_Ward">
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Infinity_Ward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Item_description_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Item_description_based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Lore"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Lionehead_studios -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Lionehead_studios">
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Lionhead_Studios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MASS_EFFECT_III -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MASS_EFFECT_III">
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#space_wars"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P"/>
+        <hasReleaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-03-06T00:00:00</hasReleaseDate>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Mass_Effect_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MINECRAFT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MINECRAFT">
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PS4"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Pc_gaming"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#XBOX_ONE"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#corpo_a_corpo"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#creation_based"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_roaming"/>
+        <hasMechanic rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#looting_based"/>
+        <hasNarrative rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#emergent"/>
+        <hasReleaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-11-18T00:00:00</hasReleaseDate>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Minecraft%20"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MONUMENT_VALLEY_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MONUMENT_VALLEY_II">
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Android"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Apple"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Pc_gaming"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#creative_freedom"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#painting"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3D_puzzle"/>
+        <hasNarrative rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#simple"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_isometrics"/>
+        <hasReleaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-05T00:00:00</hasReleaseDate>
+        <rdfs:comment rdf:resource="https://en.wikipedia.org/wiki/Monument_Valley_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Markus_Perrson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Markus_Perrson">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Notch"/>
+        <developerOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MINECRAFT"/>
+        <employedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mojang"/>
+        <indie rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</indie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mojang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mojang">
+        <developerOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MINECRAFT"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Mojang"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Nintendo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Nintendo">
+        <rdfs:comment rdf:resource="https://www.nintendo.it"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Nintendo_Ds -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Nintendo_Ds"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Notch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Notch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Pseudonym"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OUTLAST -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OUTLAST">
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#paranormal"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Item_description_based"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#exploration_narrative_tracks"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Outlast"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OpenWorld -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OpenWorld">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OpenWorld"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Open_map -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Open_map">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OpenWorld"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PS3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PS3"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PS4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PS4"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PS5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PS5"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PVE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PVE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplayer"/>
+        <rdfs:comment xml:lang="ita">Giocatore contro ambiente</rdfs:comment>
+        <rdfs:comment xml:lang="en">Player Versus Enviroment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PVP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PVP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplayer"/>
+        <rdfs:comment xml:lang="ita">Giocatore contro giocatore</rdfs:comment>
+        <rdfs:comment xml:lang="en">Player Versus Player</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Party -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Party">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Multiplayer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Pc_gaming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Pc_gaming"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Price -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Price">
+        <deuteragonistOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CALL_OF_DUTY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#QTE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#QTE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL">
+        <developedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CAPCOM"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#zombies_invasion"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_isometrics"/>
+        <partOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RE"/>
+        <prequelOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_0">
+        <developedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CAPCOM"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#zombies_invasion"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#looting_based"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_isometrics"/>
+        <partOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RE"/>
+        <prequelOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Resident_Evil_Zero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_2">
+        <developedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CAPCOM"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#zombies_invasion"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#looting_based"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_isometrics"/>
+        <partOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RE"/>
+        <prequelOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_3">
+        <developedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CAPCOM"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#zombies_invasion"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#looting_based"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_isometrics"/>
+        <partOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RE"/>
+        <prequelOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_4">
+        <developedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CAPCOM"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#zombies_invasion"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#looting_based"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P"/>
+        <partOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RE"/>
+        <prequelOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_5"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Resident_Evil_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_5">
+        <developedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CAPCOM"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#zombies_invasion"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#looting_based"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P"/>
+        <partOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RE"/>
+        <prequelOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_6">
+        <developedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CAPCOM"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#zombies_invasion"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#looting_based"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P"/>
+        <partOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RE"/>
+        <prequelOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RESIDENT_EVIL_7">
+        <developedBy rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CAPCOM"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#monster_invasion"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#looting_based"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time"/>
+        <hasMechanic rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#character_development"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P"/>
+        <partOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#RE"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Resident_Evil_7:_Biohazard%20"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Red_Barrels -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Red_Barrels">
+        <developerOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OUTLAST"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Red_Barrels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#SKY_RACOON -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#SKY_RACOON">
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_platform"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#2D_puzzle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simon_Ghost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simon_Ghost"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Soap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Soap">
+        <protagonistOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#CALL_OF_DUTY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Supermassive_Games -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Supermassive_Games">
+        <developerOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#UNTIL_DOWN"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Supermassive_Games"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Switch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Switch"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TEKKEN_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TEKKEN_7">
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PVP"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#corpo_a_corpo"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#with_matches"/>
+        <hasNarrative rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#simple"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Tekken_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#UBISOFT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#UBISOFT">
+        <developerOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN&apos;SCREED"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Ubisoft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#UNTIL_DOWN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#UNTIL_DOWN">
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#paranormal"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#exploration_narrative_tracks"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#paranormal"/>
+        <hasMechanic rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#embedded_choice"/>
+        <hasMechanic rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#prompted_interaction"/>
+        <hasPOV rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Until_Dawn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Utswo_games -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Utswo_games">
+        <developerOf rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#MONUMENT_VALLEY_II"/>
+        <rdfs:comment rdf:resource="https://en.wikipedia.org/wiki/Ustwo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#XBOX-series_S -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#XBOX-series_S"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#XBOX-series_X -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#XBOX-series_X"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#XBOX_360 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#XBOX_360"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#XBOX_ONE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#XBOX_ONE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#acquisition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#acquisition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Free"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#agonistic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#agonistic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Sportive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#character_development -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#character_development">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#context_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#context_based"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#corpo_a_corpo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#corpo_a_corpo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#corruption -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#corruption">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Grotesque"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#creation_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#creation_based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulation"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#SandBox"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#creative_freedom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#creative_freedom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Free"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#dungeon_exploration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#dungeon_exploration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Exploration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#embedded_choice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#embedded_choice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Choice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#emergent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#emergent">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Emergent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#escape">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#evocation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#evocation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Evocative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#exploration_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#exploration_based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Lore"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#exploration_narrative_tracks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#exploration_narrative_tracks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Exploration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#framed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#framed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Framed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_interaction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_interaction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ContextualInteraction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_roaming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_roaming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Exploration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#free_shooting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Shooting"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Shooter"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hidden -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#hidden">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PointAndClick"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#highlight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#highlight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PointAndClick"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#historical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#historical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Realistic"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#contextOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPSRealistic"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#contextOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPSRealistic"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#homely -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#homely">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Familiar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#horror -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#horror"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#job_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#job_based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulation"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#JobSim"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#learning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#learning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Educative"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Educational"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#looting_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#looting_based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Inventory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#math -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#math">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Educative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#minigame -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#minigame">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Minigames"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#mithical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#mithical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fantasy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#monster_invasion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#monster_invasion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Grotesque"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#multiple_choice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#multiple_choice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Choice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#painting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#painting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Art"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#paranormal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#paranormal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Grotesque"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#permanent_death -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#permanent_death">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#post_apocaliptic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#post_apocaliptic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Fantasy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#prompted_interaction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#prompted_interaction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ContextualInteraction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#psychological -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#psychological">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Grotesque"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Malee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time_strategy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time_strategy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Strategy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#romance_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#romance_based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulation"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#DatingSim"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#side_scrolling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#side_scrolling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Isometric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#simple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#simple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simple"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#single -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#single"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#space_wars -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#space_wars">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Familiar"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#contextOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPSFantasy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#contextOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPSFantasy"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_PC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_PC"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_isometrics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_isometrics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Isometric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_platform -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_platform">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Movement"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Platformer"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_stealth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_stealth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Movement"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Stealth"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_textual -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_textual">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Textual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_time_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_time_based"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#survivalhorror -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#survivalhorror"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#thehangedman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#thehangedman"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#turn_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#turn_based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Malee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#unlockable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#unlockable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Inventory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#urban -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#urban">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Familiar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#value_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#value_based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulation"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Management"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#vehicle_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#vehicle_based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Simulation"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#gameplayOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#DrivingSim"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#walltext -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#walltext">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POV"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#war -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#war">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Realistic"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#contextOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPSRealistic"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#contextOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#TPSRealistic"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#with_matches -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#with_matches">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Malee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#with_teams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#with_teams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Malee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#zombies_invasion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#zombies_invasion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Grotesque"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POVOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPS"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POVOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPSFantasy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#POVOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#FPSRealistic"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#2D_puzzle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#2D_puzzle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Puzzle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3D_puzzle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3D_puzzle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Puzzle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P"/>
+    
+
+
+    <!-- http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN&apos;SCREED -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN&apos;SCREED">
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#PS3"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#XBOX_360"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#historical"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OpenWorld"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#exploration_narrative_tracks"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#real_time"/>
+        <hasGameplay rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#standard_stealth"/>
+        <hasMechanic rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Item_description_based"/>
+        <hasNarrative rdf:resource="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#simple"/>
+        <rdfs:comment rdf:resource="https://it.wikipedia.org/wiki/Assassin%27s_Creed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#OpenWorld">
+        <rdfs:comment xml:lang="ita">gioco che offre al giocatore un mondo veramente ampio nel quale vagare, spesso riempito di eventi casuali, punti di interesse, punti per scambiare merci e oggetti da collezionare.</rdfs:comment>
+        <rdfs:comment xml:lang="en">game that offers to the player a very large world to roam, often filled with random events, points of interest (POI), locations to trade goods and find collectibles.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#Party">
+        <rdfs:comment xml:lang="en">Game made for parties</rdfs:comment>
+        <rdfs:comment>gioco creato apposta per feste</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#QTE">
+        <rdfs:comment xml:lang="ita">un Quick-Time Event è una meccanica che mette alla prova i riflessi del giocatore facendogli premere un pulsante specifico al momento giusto</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Quick-Time-Event is a mechanic that tests the player&apos;s reflexes by making them press a specific button at the right time</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment xml:lang="ita">stato dell’arte dell’industria videoludica</rdfs:comment>
+        <rdfs:comment xml:lang="en">State of the art of the Videogame Industry</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

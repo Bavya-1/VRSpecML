@@ -1,0 +1,107 @@
+{
+  "id": "sustainable_smart_farm",
+  "name": "Sustainable Smart Farm",
+  "package": "VRSpecML::SmartFarm",
+  "description": "Immersive VR training in which a learner inspects a farm, collects soil and water samples, performs chemical analysis, identifies soil/water/crop issues, chooses a sustainable agricultural action and observes its environmental impact.",
+  "ontologies": [
+    {
+      "key": "AGRO",
+      "file": "agro.owl",
+      "focus": "crops, pests, farming processes"
+    },
+    {
+      "key": "ENVO",
+      "file": "envo.owl",
+      "focus": "soil, water, ecosystem, environmental conditions"
+    },
+    {
+      "key": "CHMO",
+      "file": "chmo-full.owl",
+      "focus": "chemical testing of soil, water and fertilizer"
+    }
+  ],
+  "sop_files": [],
+  "metaclass_focus": {
+    "Scene": {
+      "ontologies": [
+        "ENVO",
+        "AGRO"
+      ],
+      "facets": [
+        "farm_setting",
+        "crops",
+        "climate_location",
+        "environmental_impacts"
+      ],
+      "query": "farm agricultural field cropland plot orchard paddy greenhouse watershed ecosystem soil water body environment",
+      "guidance": "the farm as the spatial container; the specific fields/plots, water bodies (well, canal, stream, groundwater) and the field laboratory where analysis happens."
+    },
+    "Article": {
+      "ontologies": [
+        "AGRO",
+        "ENVO",
+        "CHMO"
+      ],
+      "facets": [
+        "equipment",
+        "crops",
+        "chemical_tests",
+        "soil_issues",
+        "water_issues"
+      ],
+      "query": "soil sample water sample crop plant pest organism fertilizer agrochemical implement equipment instrument sensor reagent",
+      "guidance": "Tangible in-scene objects: soil and water samples, sampling tools, test instruments and reagents, crops, pests, agricultural inputs (fertilizer, amendments, mulch) and the learner."
+    },
+    "ActionResponse": {
+      "ontologies": [
+        "CHMO",
+        "AGRO",
+        "ENVO"
+      ],
+      "facets": [
+        "chemical_tests",
+        "agricultural_actions",
+        "environmental_impacts"
+      ],
+      "query": "sampling process chemical analysis measurement method fertilizer application irrigation tillage pest control environmental process response",
+      "guidance": "One stereotype per user interaction with its system response: field inspection, soil/water sampling, each chemical analysis method, applying an agricultural action, observing the impact."
+    },
+    "Behavior": {
+      "ontologies": [
+        "ENVO",
+        "AGRO"
+      ],
+      "facets": [
+        "soil_issues",
+        "water_issues",
+        "constraints",
+        "environmental_impacts"
+      ],
+      "query": "soil quality threshold limit salinity acidity nutrient balance contamination degradation erosion compaction condition rule",
+      "guidance": "Rules, not processes: name them as limits/rules (…Threshold, …Limit, …Rule, …Quota, …Safeguard). Soil/water quality thresholds, diagnosis rules that identify an issue, admissibility of agricultural actions, water quotas and environmental safeguards from the SOPs."
+    },
+    "Timeline": {
+      "ontologies": [
+        "AGRO",
+        "ENVO"
+      ],
+      "facets": [
+        "agricultural_actions",
+        "crops"
+      ],
+      "query": "cropping season crop rotation growth stage schedule sequence of farming operations monitoring cycle protocol",
+      "guidance": "Ordered sequences, not single processes: the VR training session as ordered phases; its step/phase stereotype, the cropping season or rotation cycle, and the post-action monitoring schedule."
+    }
+  },
+  "contrast_terms": [
+    "soil",
+    "water",
+    "groundwater",
+    "air",
+    "sediment",
+    "plant",
+    "leaf",
+    "manure",
+    "fertilizer"
+  ]
+}

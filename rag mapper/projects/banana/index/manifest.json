@@ -1,0 +1,15 @@
+{
+  "kb_version": 5,
+  "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "domain": "banana",
+  "sources": {},
+  "counts": {
+    "class": 0,
+    "property": 0,
+    "chunk": 0,
+    "rule": 0
+  },
+  "sop_docs": [],
+  "built_at": "2026-10-14 08:59",
+  "build_seconds": 0.0
+}

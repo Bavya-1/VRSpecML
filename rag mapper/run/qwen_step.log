@@ -1,0 +1,5 @@
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-10-14T08:57:32.842] error: *** STEP 20378.3 ON gnode049 CANCELLED AT 2026-10-14T08:57:32 DUE to SIGNAL Killed ***
+srun: error: gnode049: task 0: Killed
+srun: Terminating StepId=20378.3

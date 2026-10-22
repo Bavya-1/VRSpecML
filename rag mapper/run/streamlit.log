@@ -1,0 +1,13 @@
+2026-10-14 08:57:25.164 Uvicorn server started on 0.0.0.0:8501
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://172.16.0.149:8501
+  External URL: http://218.185.248.162:8501
+
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-10-14T08:57:32.842] error: *** STEP 20378.2 ON gnode049 CANCELLED AT 2026-10-14T08:57:32 DUE to SIGNAL Killed ***
+srun: error: gnode049: task 0: Killed
+srun: Terminating StepId=20378.2

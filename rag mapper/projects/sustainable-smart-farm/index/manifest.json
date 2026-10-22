@@ -1,0 +1,41 @@
+{
+  "kb_version": 5,
+  "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "domain": "sustainable-smart-farm",
+  "sources": {
+    "rag mapper/projects/sustainable-smart-farm/ontologies/agro.owl": [
+      7501012,
+      1791871135.1
+    ],
+    "rag mapper/projects/sustainable-smart-farm/ontologies/envo.owl": [
+      9614229,
+      1791871135.2
+    ],
+    "rag mapper/projects/sustainable-smart-farm/ontologies/chmo-full.owl": [
+      5719147,
+      1791871135.3
+    ],
+    "rag mapper/projects/sustainable-smart-farm/sop/FAO.pdf": [
+      1536644,
+      1791871135.3
+    ]
+  },
+  "counts": {
+    "class": 12245,
+    "property": 240,
+    "chunk": 57,
+    "rule": 86
+  },
+  "sop_docs": [
+    {
+      "doc": "FAO",
+      "title": "Voluntary Guidelines for Sustainable Soil Management",
+      "pages": 26,
+      "chunks": 57,
+      "rules": 86,
+      "file": "FAO.pdf"
+    }
+  ],
+  "built_at": "2026-10-13 11:31",
+  "build_seconds": 141.4
+}

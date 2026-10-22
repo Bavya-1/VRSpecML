@@ -1,0 +1,11 @@
+streamlit>=1.60
+rdflib>=7.0
+sentence-transformers>=3.0
+faiss-cpu>=1.8
+pypdf>=5.0
+numpy
+pandas
+pydantic>=2.7
+jsonschema>=4.20
+requests
+torch

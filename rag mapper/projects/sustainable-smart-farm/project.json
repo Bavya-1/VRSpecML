@@ -1,0 +1,25 @@
+{
+  "slug": "sustainable-smart-farm",
+  "name": "Sustainable smart farm",
+  "created": "2026-10-13 11:28:55",
+  "ontologies": [
+    {
+      "key": "AGRO",
+      "file": "agro.owl",
+      "focus": ""
+    },
+    {
+      "key": "ENVO",
+      "file": "envo.owl",
+      "focus": ""
+    },
+    {
+      "key": "CHMOFULL",
+      "file": "chmo-full.owl",
+      "focus": ""
+    }
+  ],
+  "sop_files": [
+    "FAO.pdf"
+  ]
+}
